@@ -1,15 +1,17 @@
-n = int(input())
-cnt = 0
-result = []
+from collections import deque
+import sys
+input = sys.stdin.readline
+num = int(input())
 
-
-for i in range(n):
-    result = input()
-
-    for j in range(len(result)):
-        if(result[j] == O):
+for i in range(num):
+    dq = deque(input())
+    sum = 0
+    cnt = 0
+    for j in range(len(dq)):
+        v = dq.popleft()
+        if v == "O":
             cnt += 1
-            if(result[j+1] == O):
-                cnt += 2
-                if(result[j+3] == 0):
-                    cnt += 3
+            sum += cnt
+        else:
+            cnt = 0
+    print(sum)

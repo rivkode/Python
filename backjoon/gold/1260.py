@@ -20,9 +20,11 @@ def dfs(graph, v, visited): # 깊이 우선 탐색
 def bfs(graph, start, visited): # 너비 우선 탐색
     queue = deque([start]) # queue 사용하여 들어온 순서대로 나가는 원리
     visited[start] = True # 방문처리
+
     while queue: # queue가 존재할동안 계속
         v = queue.popleft() # queue 의 가장 왼쪽을 pop
         print(v, end=' ') # pop 숫자 출력
+
         for i in graph[v]:
             if not visited[i]: # pop 숫자의 인접한 인자가 방문처리 되지 않을 경우
                 queue.append(i) # queue 에 추가
