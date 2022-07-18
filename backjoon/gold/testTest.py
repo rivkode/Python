@@ -1,9 +1,17 @@
-# N = 4
-# graph = [[] for _ in range(N+1)]
-#
-# for _ in range(5):
-#     a, b = map(int, (input().split()))
-#     graph[a].append(b)
-#     graph[b].append(a)
-#
+
+# for i in range(h):
+#     graph.append(list(map(int, input().split())))
+# graph = []
+# [graph.append(list(map(int, input().split()))) for i in range(3)]
 # print(graph)
+
+array_list = []
+for j in range(7):
+    array_list.append(0)
+array_new = []
+for i in range(5):
+    array_new.append(array_list)
+print(array_new)
+
+
+
