@@ -1,13 +1,20 @@
+import sys
+sys.setrecursionlimit(10**6)
 
 
-def square3(cnt):
-    if cnt == 0:
-        return
+def append_star(LEN):
+    if LEN == 1:
+        return ["*"]
+    Stars = append_star(LEN//3)
+    L = []
 
-    for i in range(1, 1+cnt):
-        print("*"*cnt)
-        if i%2==0:
-            print(("*"+" "+"*")*(cnt//3))
-    cnt -=1
-    square3(cnt)
-square3(27)
+    for S in Stars:
+        L.append(S * 3)
+    for S in Stars:
+        L.append(S + ' ' * (LEN // 3) + S)
+    for S in Stars:
+        L.append(S * 3)
+    return L
+
+n = int(sys.stdin.readline().strip())
+print('\n'.join(append_star(n)))
