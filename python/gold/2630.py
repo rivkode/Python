@@ -6,7 +6,7 @@ lst = []
 answer = [0, 0]
 
 for _ in range(n):
-    lst.append(input().split(" "))
+    lst.append(input().rstrip().split(' '))
 print(lst)
 
 def paper(lst):
@@ -23,12 +23,6 @@ def paper(lst):
             lst[i].append(lst[j][0:length])
     return paper(lst1), paper(lst2), paper(lst3), paper(lst4)
 
-
-
-
 paper(lst)
 
-print(lst1)
-print(lst2)
-print(lst3)
-print(lst4)
+
