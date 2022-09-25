@@ -1,9 +1,8 @@
 a = int(input())
-b = map(int, input())
-b = list(b)
+b = list(map(int, input()))
 
-c = 0
+num = 0
 for i in range(len(b)):
-    c = c + b[i]
+    num = num + b[i]
 
-print(c)
+print(num)
