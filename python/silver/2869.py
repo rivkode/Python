@@ -3,16 +3,9 @@ input = sys.stdin.readline
 
 a, b, v = map(int, input().split())
 
+cnt = (v-b)/(a-b) # 총 걸리는 날짜
 
-# while c < v:
-#     c += a
-#     cnt += 1
-#     if c >= v:
-#         break
-#     c -= b
+if cnt != int(cnt):  # 만약 소수점이 나오면 +1일을 해준다
+    cnt += 1
 
-cnt = (v-b)/(a-b)
-
-
-print(int(cnt) if cnt == int(cnt) else int(cnt)+1)
-
+print(int(cnt))
