@@ -1,3 +1,0 @@
-num = int(input())
-
-num
